@@ -40,7 +40,8 @@ FROM pledges
 INNER JOIN projects 
 ON pledges.project_id = projects.id
 WHERE projects.funding_goal <= SUM(pledges.amount)
-GROUP BY project_id; 
+GROUP BY project_id
+; 
 "
 end
 
