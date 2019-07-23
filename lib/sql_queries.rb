@@ -9,9 +9,15 @@
 def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_name
 "SELECT project_id, SUM(amount)
 FROM pledges
-JOIN 
+INNER JOIN projects 
+ON pledges.project_id = projects.id
 GROUP BY project_id;"
 end
+
+SELECT column_name(s)
+FROM first_table
+INNER JOIN second_table
+ON first_table.column_name = second_table.column_name;
 
 SELECT 
 FROM
