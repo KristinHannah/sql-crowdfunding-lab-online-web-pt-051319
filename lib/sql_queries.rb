@@ -39,7 +39,6 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
 FROM pledges
 INNER JOIN projects 
 ON pledges.project_id = projects.id
-WHERE SUM(pledges.amount) >= projects.funding_goal
 GROUP BY project_id; 
 "
 end
